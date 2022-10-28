@@ -38,13 +38,13 @@ export const getDb = async () => {
   console.error('GET from DB');
 
   // Create connection to DB
-  const jateDB = await openDB("jate", 1);
+  const jateDB = await openDB('jate', 1);
 
 // Create new transaction and state the DB and data privileges
-  const tx = jateDB.transaction("jate", "readonly");
+  const tx = jateDB.transaction('jate', 'readonly');
 
   // Open objectstore
-  const store = tx.objectStore("jate");
+  const store = tx.objectStore('jate');
 
   // Get all data
   const request = store.getAll();
